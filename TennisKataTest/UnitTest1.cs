@@ -11,25 +11,27 @@ namespace Tests
         {
         }
 
-        [Test]
-        public void PlayerOneHasNoPoints()
+        public class GivenANewGame
         {
-            var game = new Game();
-            Assert.AreEqual(game.PlayerOneScore(), "Love");
-        }
+            private readonly Game _game = new Game();
+            
+            [Test]
+            public void PlayerOneHasNoPoints()
+            {
+                Assert.AreEqual(_game.PlayerOneScore(), "Love");
+            }
 
-        [Test]
-        public void PlayerTwoHasNoPoints()
-        {
-            var game = new Game();
-            Assert.AreEqual(game.PlayerTwoScore(), "Love");
-        }
+            [Test]
+            public void PlayerTwoHasNoPoints()
+            {
+                Assert.AreEqual(_game.PlayerTwoScore(), "Love");
+            }
 
-        [Test]
-        public void CurrentScoreShouldBeLoveLove()
-        {
-            var game = new Game();
-            Assert.AreEqual(game.CurrentScore(), "Love: Love");
+            [Test]
+            public void CurrentScoreShouldBeLoveLove()
+            {
+                Assert.AreEqual(_game.CurrentScore(), "Love: Love");
+            }
         }
     }
 }
