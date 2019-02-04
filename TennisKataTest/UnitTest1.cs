@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using TennisKata;
 
 namespace Tests
 {
@@ -10,9 +11,10 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
+        public void PlayerOneHasNoPoints()
         {
-            Assert.Pass();
+            var game = new Game();
+            Assert.AreEqual(game.PlayerOneScore(), "Love");
         }
     }
 }
