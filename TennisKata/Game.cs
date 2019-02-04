@@ -8,5 +8,10 @@ namespace TennisKata
         {
             return "Love";
         }
+
+        public string PlayerTwoScore()
+        {
+            return "Love";
+        }
     }
 }

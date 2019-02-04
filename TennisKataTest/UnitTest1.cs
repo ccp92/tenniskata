@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Bson;
 using NUnit.Framework;
 using TennisKata;
 
@@ -15,6 +16,13 @@ namespace Tests
         {
             var game = new Game();
             Assert.AreEqual(game.PlayerOneScore(), "Love");
+        }
+
+        [Test]
+        public void PlayerTwoHasNoPoints()
+        {
+            var game = new Game();
+            Assert.AreEqual(game.PlayerTwoScore(), "Love");
         }
     }
 }
