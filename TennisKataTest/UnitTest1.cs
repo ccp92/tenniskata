@@ -24,5 +24,12 @@ namespace Tests
             var game = new Game();
             Assert.AreEqual(game.PlayerTwoScore(), "Love");
         }
+
+        [Test]
+        public void CurrentScoreShouldBeLoveLove()
+        {
+            var game = new Game();
+            Assert.AreEqual(game.CurrentScore(), "Love: Love");
+        }
     }
 }
